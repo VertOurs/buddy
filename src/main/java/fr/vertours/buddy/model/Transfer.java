@@ -1,6 +1,7 @@
 package fr.vertours.buddy.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -18,10 +19,11 @@ public class Transfer {
     @Column(name = "amount_no_tax", nullable = false)
     private BigDecimal amountNoTax;
 
-    @Column(name = "tax", nullable = false)
+    @Column(nullable = false)
     private BigDecimal tax;
 
-    @Column(name = "description")
+    @Column
+    @NotBlank
     private String description;
 
     @ManyToOne

@@ -10,7 +10,7 @@ public class ApplicationAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+                                                                                //OneToOne
     @OneToOne(optional = false)
     @JoinColumn(name = "user", nullable = false)
     private User user;
