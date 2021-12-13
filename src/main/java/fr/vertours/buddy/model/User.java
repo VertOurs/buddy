@@ -48,6 +48,78 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<CreditCard> creditCardList = new ArrayList<>();
 
-    @OneToMany
+    @ManyToMany
     private List<Role> role = new ArrayList<>();
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public ApplicationAccount getAccount() {
+        return account;
+    }
+
+    public void setAccount(ApplicationAccount account) {
+        this.account = account;
+    }
+
+    public List<User> getMyFriendList() {
+        return myFriendList;
+    }
+
+    public void setMyFriendList(List<User> myFriendList) {
+        this.myFriendList = myFriendList;
+    }
+
+    public List<CreditCard> getCreditCardList() {
+        return creditCardList;
+    }
+
+    public void setCreditCardList(List<CreditCard> creditCardList) {
+        this.creditCardList = creditCardList;
+    }
+
+    public List<Role> getRole() {
+        return role;
+    }
+
+    public void setRole(List<Role> role) {
+        this.role = role;
+    }
 }

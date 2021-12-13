@@ -13,6 +13,8 @@ public class MyAuthentificationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+       String password = (String) authentication.getCredentials();
+       String userName = authentication.getName();
         return new UsernamePasswordAuthenticationToken("admin", "admin", new ArrayList<>());
     }
 
