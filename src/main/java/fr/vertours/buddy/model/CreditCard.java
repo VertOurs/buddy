@@ -34,6 +34,11 @@ public class CreditCard {
     @Size(min = 2, max = 2)
     private String validityYear;
 
+    @Column(nullable = false)
+    @NotBlank
+    @Size(min = 3, max = 3)
+    private String cryptogram;
+
     public Long getId() {
         return id;
     }
@@ -80,5 +85,13 @@ public class CreditCard {
 
     public void setValidityYear(String validityYear) {
         this.validityYear = validityYear;
+    }
+
+    public String getCryptogram() {
+        return cryptogram;
+    }
+
+    public void setCryptogram(String cryptogram) {
+        this.cryptogram = cryptogram;
     }
 }
